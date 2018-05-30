@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h2 #{venue.name}
+    .single
+        .single__hero
+            img.single__image(src=`${photoUrl}`)
+    .single__details.inner
+        img.single__map(src=h.staticMap([venue.location.lng, venue.location.lat]))
+        p.single__location= h.getAddress(venue)

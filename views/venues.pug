@@ -1,0 +1,9 @@
+extends layout
+include mixins/_venueCard
+block content
+    .inner
+        h2= title
+        //- pre!= h.dump(venues)
+        .venues
+            each venue in venues
+                +venueCard(venue)

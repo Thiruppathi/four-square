@@ -1,0 +1,5 @@
+mixin venueCard(venue = {})
+    a(href=`/venues/${venue.id}` class="venue")
+        .venue__hero
+            img(src=h.categoryIcon(venue))
+            p #{venue.name}

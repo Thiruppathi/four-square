@@ -1,0 +1,16 @@
+mixin searchVenueForm(venue = {})
+        .card
+            form(action=`/venues`, method="get" )
+
+              label(for='address') I'm Looking For
+              input(type="text" id="query" name="query" class="search-address" placeholder="Coffee / Pizza" value="")
+
+              label(for='address') In the Location
+              input(type="text" id="near" name="near" class="search-address" placeholder="City / Country / ZipCode" value="")
+              input(type="hidden" id="fromLng" name="fromLng" value="" )
+              input(type="hidden" id="fromLat" name="fromLat" value="" )
+
+              input(type="submit", value="Search Venues" class="submitButton" id="searchVenues")
+        .flash-messages(id='searchVenueErr' hidden)
+            Err.flash.flash--error
+                p.flash__text Enter Address

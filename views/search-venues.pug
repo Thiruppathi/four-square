@@ -1,0 +1,17 @@
+extends layout
+include mixins/_searchVenueForm
+include mixins/_venueCard
+
+block content
+    .inner
+        h2= title
+        .flash-messages(id='searchVenueErr' hidden)
+            Err.flash.flash--error
+                p.flash__text Enter Address
+        +searchVenueForm()
+        if venues
+            .inner
+                .venues
+                    each venue in venues
+                        +venueCard(venue)
+        #map

@@ -1,0 +1,30 @@
+$black: #303030;
+$white: white;
+$width: 800px;
+$purple: #262161;
+$yellow: #ffc40e;
+$pink: #ee7297;
+$green: #93ff00;
+$red: #e50714;
+$blue: #313757;
+$grey: #4f5d78;
+$field-grey: #efefef;
+$shad: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+$grad: linear-gradient(
+  90deg,
+  #48ded4 0%,
+  #a026bf 20%,
+  #e82c75 60%,
+  $yellow 85%,
+  #48ded4 95%
+);
+$verticalGrad: linear-gradient(
+  0,
+  #48ded4 0%,
+  #a026bf 20%,
+  #e82c75 60%,
+  $yellow 85%,
+  #48ded4 95%
+);
+// $venue-font: Inconsolata,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
+$venue-font: "Roboto Mono", "Rubrik", sans-serif;
