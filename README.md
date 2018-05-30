@@ -8,6 +8,18 @@
 npm install
 ```
 
+### 2. Setup API Keys
+
+Rename `variables.env.sample` to `variables.env` and update the following keys.
+
+```
+MAP_KEY=<Insert API Key from Google Maps>
+FOUR_SQUARE_CLIENT_ID=<Insert Client Id from FourSquare>
+FOUR_SQUARE_CLIENT_SECRET=<Insert Client Secret from FourSquare>
+```
+
+Skipping this step would cause a `Type Error` while rendering the `pug` templates.
+
 ### How to run the application
 
 ```bash
