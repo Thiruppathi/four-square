@@ -1,46 +1,59 @@
-input,
-textarea {
-  width: 100%;
-  border: 0px;
-  border: 1px solid $blue;
+.filter-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
   font-family: $venue-font;
-  font-size: 1.15em;
-  line-height: 1.5;
-  padding: 10px 0 10px 5px;
-  &.input {
-    &--error {
-      border-color: red;
-    }
-  }
 }
 
-input[text]:focus {
-  background: $field-grey;
+.filter-options h2 {
+  color: white;
+  font-weight: normal;
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  letter-spacing: 3px;
 }
 
-input#photo {
-  border: 0;
+.filter-options .selectWrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(33.33% - 20px);
+  margin: 0 10px;
 }
 
-label {
-  padding: 20px 0 10px 0;
-  display: block;
-  font-size: 1em;
+.filter-options label {
   color: $blue;
+  padding: 0 10px;
 }
 
-.form {
-  background: white;
-  padding: 2rem;
-  box-shadow: $grad;
-  & + .form {
-    margin-top: 4rem;
-  } // I know this isn't bem but meh
-  h2 {
-    margin: 0;
-    font-size: 2rem;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid $grey;
-  }
+.filter-options input {
+  background-color: #fff;
+  border: 1px solid $blue;
+  height: 48px;
+  letter-spacing: 0;
+  margin: 10px;
+  padding: 0 10px;
+  width: 100%;
+  font-family: $venue-font;
+}
+
+.filter-options input:focus {
+  outline: $blue auto 3px;
+  outline-offset: -1px;
+}
+
+.filter-options .submitButton {
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  margin: 20px 0 4px 0;
+  color: white;
+  background-color: $blue;
+  font-family: $venue-font;
+  font-weight: 400;
+  font-size: 2rem;
 }

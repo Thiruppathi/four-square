@@ -4,14 +4,14 @@ include mixins/_venueCard
 
 block content
     .inner
-        h2= title
-        .flash-messages(id='searchVenueErr' hidden)
-            Err.flash.flash--error
-                p.flash__text Enter Address
-        +searchVenueForm()
+        +searchVenueForm(near, category, lat, lng)
         if venues
             .inner
                 .venues
                     each venue in venues
                         +venueCard(venue)
-        #map
+        if noResults
+            .flash-messages(id='searchVenueErr')
+                Err.flash.flash--warning.animated.bounceInUp
+                    p.flash__text Please refine search critera!
+                    button.flash__remove(onClick="this.parentElement.remove()") &times;
