@@ -73,11 +73,15 @@ exports.titleCase = str => {
   return str.join(" ");
 };
 
+exports.getSimilar = similarVenues => {
+  return similarVenues.length || "No Similar Venues";
+};
+
 // Some details about the site
 exports.siteName = `Foure Square`;
 
 // This is how the nav menu is built.
 exports.menu = [
-  { slug: "/search-venues", title: "Search", icon: "search" },
-  { slug: "/explore", title: "Explore", icon: "near-me", id: "explore" }
+  { slug: "/search-venues", title: "Search", icon: "search" }
+  // { slug: "/explore", title: "Explore", icon: "near-me", id: "explore" }
 ];

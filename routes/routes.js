@@ -9,4 +9,7 @@ router.get("/venues", catchErrors(appController.getVenues));
 router.get("/venues/:venueId", catchErrors(appController.getVenueById));
 router.get("/explore", catchErrors(appController.explore));
 
+// API Routes
+router.get("api/similar/:venueId", catchErrors(appController.getSimilarVenues));
+
 module.exports = router;

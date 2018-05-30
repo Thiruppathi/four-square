@@ -1,4 +1,5 @@
 extends layout
+include mixins/_venueCard
 
 block content
     h2.center #{venue.name}
@@ -10,4 +11,11 @@ block content
         p.single__location= h.getAddress(venue)
         p.single__description= h.getDescription(venue)
         p.single__description= h.getStats(venue)
-        
+
+    if similarVenues.length
+        .inner
+            h4.center Similar Places like this
+            .venues
+                each venue in similarVenues
+                    +venueCard(venue)
+

@@ -36,11 +36,29 @@ exports.getVenueById = async (req, res, next) => {
   let venueId = req.params.venueId;
   const result = await axios(getVenueByIdUrl(venueId));
   let venue = result.data.response.venue;
+  let similarVenues = await this.getSimilarVenuesList(venue.id);
+  console.log("----- ", similarVenues, similarVenues.length);
   res.render("venue", {
     venue,
     title: venue.name,
-    photoUrl: getPhoto(venue)
+    photoUrl: getPhoto(venue),
+    similarVenues
   });
+};
+
+exports.getSimilarVenues = async (req, res) => {
+  let venueId = req.params.venueId;
+  const result = await axios(getSimilarVenueUrl(venueId));
+  let venues = result.data.response.similarVenues.items;
+  console.log("similar length: ", venues.length);
+  res.json({ venues });
+};
+
+exports.getSimilarVenuesList = async venueId => {
+  const result = await axios(getSimilarVenueUrl(venueId));
+  let venues = result.data.response.similarVenues.items;
+  console.log("similar length: ", venues.length);
+  return venues;
 };
 
 exports.explore = async (req, res) => {
@@ -58,6 +76,12 @@ function getUrl(ll, query, near) {
 
 function getVenueByIdUrl(venueId) {
   const url = `https://api.foursquare.com/v2/venues/${venueId}?`;
+  const params = { v, client_id, client_secret };
+  return { url, params };
+}
+
+function getSimilarVenueUrl(venueId) {
+  const url = `https://api.foursquare.com/v2/venues/${venueId}/similar?`;
   const params = { v, client_id, client_secret };
   return { url, params };
 }
