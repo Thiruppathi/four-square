@@ -50,7 +50,7 @@
   font-family: $venue-font;
 }
 
-.filter-options input:focus {
+.filter-options input[type=text]:focus {
   outline: $blue auto 3px;
   outline-offset: -1px;
 }
@@ -72,4 +72,45 @@
     width: 100%;
     padding: 0;
   }
+}
+
+.slidecontainer {
+  padding: 20px 0;
+  margin: 0 0 20px 0;
+}
+
+.filter-options .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: $blue;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 10px 0;
+}
+
+.filter-options .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: $blue;
+  cursor: pointer;
+}
+
+.filter-options .slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: $blue;
+  cursor: pointer;
+}
+
+#radiusLabel {
+  color: $blue;
+  font-weight: 700;
 }

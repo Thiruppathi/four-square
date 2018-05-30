@@ -4,13 +4,14 @@ include mixins/_venueCard
 
 block content
     .inner.searchContainer
-        +searchVenueForm(near, category, lat, lng)
+        +searchVenueForm(near, category, lat, lng, radius)
     if venues
         .inner
             .venues
                 each venue in venues
                     +venueCard(venue)
-        if noResults
+    if noResults
+        .inner
             .flash-messages(id='searchVenueErr')
                 Err.flash.flash--warning.animated.bounceInUp
                     p.flash__text Please refine search critera!

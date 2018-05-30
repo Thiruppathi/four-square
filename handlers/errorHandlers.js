@@ -50,7 +50,7 @@ exports.developmentErrors = (err, req, res, next) => {
 
   console.log(errorDetails);
   if (!err.status) {
-    let { near, category, lat, lng } = req.query;
+    let { near, category, lat, lng, radius } = req.query;
     res.format({
       // Based on the `Accept` http header
       "text/html": () => {
@@ -60,6 +60,7 @@ exports.developmentErrors = (err, req, res, next) => {
           category,
           lat,
           lng,
+          radius,
           noResults: true
         });
       }, // Form Submit, Reload the page

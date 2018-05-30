@@ -1,4 +1,4 @@
-mixin searchVenueForm(near="", category="", lat ="", lng="")
+mixin searchVenueForm(near="", category="", lat ="", lng="",radius="1000")
         form(action=`/venues`, method="get" )
             .filter-options
                 .selectWrapper
@@ -10,4 +10,16 @@ mixin searchVenueForm(near="", category="", lat ="", lng="")
                     input(type="hidden" id="lng" name="lng" value=`${lng}` )
                     input(type="hidden" id="lat" name="lat" value=`${lat}` )
                 .selectWrapper
+                    label(for='slider') Within 
+                        span(id="radiusLabel") `${radius}` 
+                        |   meter Radius
+                    .slidecontainer
+                        input(type="range" min="10" max="1000" value=`${radius}`  class="slider" name="radius" id="radius")
+                .selectWrapper
                     input(type="submit", value="Search Venues" class="submitButton" id="searchVenues")
+                //- .selectWrapper
+                //-     input(type="button", value="Get My Location" class="submitButton" id="locateMe")
+                //-     div(id="nudge")
+
+
+

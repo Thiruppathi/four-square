@@ -36,7 +36,13 @@ html
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     .content
       block content
-
+    .inner
+        .flash-messages.hidden(id='nudge')
+            Err.flash.flash--info.animated.bounceInUp
+                p.flash__text(id='nudgeInfo') Loading...
+        .flash-messages.hidden(id='nudgeSuccess')
+            Err.flash.flash--success.animated.bounceInUp
+                p.flash__text(id='nudgeSuccess') Successfully located you!!
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
       script(src="/dist/App.bundle.js")

@@ -13,7 +13,8 @@ exports.renderSearchVenues = (req, res) => {
 };
 
 exports.getVenues = async (req, res) => {
-  let { near = "", category, lat, lng } = req.query;
+  let { near = "", category, lat, lng, radius } = req.query;
+  console.log(req.query);
   let ll = lat && lng ? `${lat},${lng}` : "";
   let url = getUrl(ll, category, near);
   let result = await axios(url);
@@ -26,6 +27,7 @@ exports.getVenues = async (req, res) => {
     category,
     lat,
     lng,
+    radius,
     noResults
   });
 };
@@ -39,6 +41,10 @@ exports.getVenueById = async (req, res, next) => {
     title: venue.name,
     photoUrl: getPhoto(venue)
   });
+};
+
+exports.explore = async (req, res) => {
+  res.json({ success: "Explore" });
 };
 
 function getUrl(ll, query, near) {
