@@ -3,13 +3,13 @@ include mixins/_searchVenueForm
 include mixins/_venueCard
 
 block content
-    .inner
+    .inner.searchContainer
         +searchVenueForm(near, category, lat, lng)
-        if venues
-            .inner
-                .venues
-                    each venue in venues
-                        +venueCard(venue)
+    if venues
+        .inner
+            .venues
+                each venue in venues
+                    +venueCard(venue)
         if noResults
             .flash-messages(id='searchVenueErr')
                 Err.flash.flash--warning.animated.bounceInUp

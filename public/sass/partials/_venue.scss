@@ -1,12 +1,11 @@
 .venues {
   display: flex;
   flex-wrap: wrap;
-  margin: -1.25em 0 0 -1.25em;
 }
 
 .venue {
   background: white;
-  margin: 1.25em 0 0 1.25em;
+  margin: 10px auto;
   width: calc(33.3333% - 1.25em);
   box-shadow: $shad;
   &--wide {

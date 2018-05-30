@@ -1,3 +1,14 @@
+.inner.searchContainer {
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .inner.searchContainer {
+    margin: 10px auto;
+    border: 1px solid $blue;
+  }
+}
+
 .filter-options {
   display: flex;
   align-items: center;
@@ -11,7 +22,6 @@
   color: white;
   font-weight: normal;
   line-height: 1;
-  width: 100%;
   text-align: center;
   padding: 20px;
   margin: 0;
@@ -27,7 +37,7 @@
 
 .filter-options label {
   color: $blue;
-  padding: 0 10px;
+  padding: 0;
 }
 
 .filter-options input {
@@ -35,9 +45,8 @@
   border: 1px solid $blue;
   height: 48px;
   letter-spacing: 0;
-  margin: 10px;
+  margin: 10px 0;
   padding: 0 10px;
-  width: 100%;
   font-family: $venue-font;
 }
 
@@ -48,7 +57,6 @@
 
 .filter-options .submitButton {
   height: 50px;
-  width: 100%;
   cursor: pointer;
   margin: 20px 0 4px 0;
   color: white;
@@ -56,4 +64,12 @@
   font-family: $venue-font;
   font-weight: 400;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-options,
+  .filter-options .selectWrapper {
+    width: 100%;
+    padding: 0;
+  }
 }
