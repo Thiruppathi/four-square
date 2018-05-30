@@ -41,19 +41,40 @@ exports.developmentErrors = (err, req, res, next) => {
   const errorDetails = {
     message: "Place Not Found! Retry with different criteria. \n" + err.message,
     status: err.status,
+    query: req.query,
     stackHighlighted: err.stack.replace(
       /[a-z_-\d]+.js:\d+:\d+/gi,
       "<mark>$&</mark>"
     )
   };
-  res.status(err.status || 500);
-  res.format({
-    // Based on the `Accept` http header
-    "text/html": () => {
-      res.render("error", errorDetails);
-    }, // Form Submit, Reload the page
-    "application/json": () => res.json(errorDetails) // Ajax call, send JSON back
-  });
+
+  console.log(errorDetails);
+  if (!err.status) {
+    let { near, category, lat, lng } = req.query;
+    res.format({
+      // Based on the `Accept` http header
+      "text/html": () => {
+        res.render("search-venues", {
+          title: "Results",
+          near,
+          category,
+          lat,
+          lng,
+          noResults: true
+        });
+      }, // Form Submit, Reload the page
+      "application/json": () => res.json(errorDetails) // Ajax call, send JSON back
+    });
+  } else {
+    res.status(err.status || 500);
+    res.format({
+      // Based on the `Accept` http header
+      "text/html": () => {
+        res.render("error", errorDetails);
+      }, // Form Submit, Reload the page
+      "application/json": () => res.json(errorDetails) // Ajax call, send JSON back
+    });
+  }
 };
 
 /*

@@ -13,16 +13,21 @@ exports.renderSearchVenues = (req, res) => {
 };
 
 exports.getVenues = async (req, res) => {
-  let lat = req.query.fromLat;
-  let lng = req.query.fromLng;
-  let near = req.query.near || "";
+  let { near = "", category, lat, lng } = req.query;
   let ll = lat && lng ? `${lat},${lng}` : "";
-  let category = req.query.category;
   let url = getUrl(ll, category, near);
   let result = await axios(url);
   let venues = result.data.response.venues;
-  let venueNotFound = venues.length === 0;
-  res.render("venues", { title: "Venues", venues });
+  let noResults = venues.length === 0;
+  res.render("search-venues", {
+    title: "Results",
+    venues,
+    near,
+    category,
+    lat,
+    lng,
+    noResults
+  });
 };
 
 exports.getVenueById = async (req, res, next) => {
