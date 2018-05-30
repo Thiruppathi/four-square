@@ -40,6 +40,39 @@ exports.getAddress = venue => {
   );
 };
 
+exports.getDescription = venue => {
+  return (
+    venue.description || venue.page || venue.url || this.getCategoryType(venue)
+  );
+};
+
+exports.getCategoryType = venue => {
+  return venue.categories[0]
+    ? venue.categories[0].name ||
+        venue.categories[0].shortName ||
+        venue.categories[0].pluralName
+    : "";
+};
+
+// Developer version of API Call returns only tipCount.
+// For scalability purpose made this function to iterate over stats object.
+exports.getStats = venue => {
+  let stats = Object.entries(venue.stats).map(entry => {
+    let [key, value] = entry;
+    key = this.titleCase(key.replace("Count", "s")); // Show only type of stats. remove Count suffix.
+    return `${key}: ${value}`;
+  });
+  return stats;
+};
+
+exports.titleCase = str => {
+  str = str.toLowerCase().split(" ");
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+  return str.join(" ");
+};
+
 // Some details about the site
 exports.siteName = `Foure Square`;
 

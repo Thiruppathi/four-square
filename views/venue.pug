@@ -1,10 +1,13 @@
 extends layout
 
 block content
-    h2 #{venue.name}
+    h2.center #{venue.name}
     .single
         .single__hero
             img.single__image(src=`${photoUrl}`)
     .single__details.inner
         img.single__map(src=h.staticMap([venue.location.lng, venue.location.lat]))
         p.single__location= h.getAddress(venue)
+        p.single__description= h.getDescription(venue)
+        p.single__description= h.getStats(venue)
+        

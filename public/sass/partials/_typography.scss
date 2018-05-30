@@ -1,15 +1,6 @@
 @font-face {
   font-family: "Roboto Mono", "Rubrik", sans-serif;
-  src: url("/fonts/RobotoMono-Bold.ttf") format("ttf"),
-    url("/fonts/RobotoMono-BoldItalic.ttf") format("ttf"),
-    url("/fonts/RobotoMono-Italic.ttf") format("ttf"),
-    url("/fonts/RobotoMono-Light.ttf") format("ttf"),
-    url("/fonts/RobotoMono-LightItalic.ttf") format("ttf"),
-    url("/fonts/RobotoMono-Medium.ttf") format("ttf"),
-    url("/fonts/RobotoMono-MediumItalic.ttf") format("ttf"),
-    url("/fonts/RobotoMono-Regular.ttf") format("ttf"),
-    url("/fonts/RobotoMono-Thin.ttf") format("ttf"),
-    url("/fonts/RobotoMono-ThinItalic.ttf") format("ttf");
+  src: url("/fonts/RobotoMono-Bold.ttf") format("ttf"), url("/fonts/RobotoMono-BoldItalic.ttf") format("ttf"), url("/fonts/RobotoMono-Italic.ttf") format("ttf"), url("/fonts/RobotoMono-Light.ttf") format("ttf"), url("/fonts/RobotoMono-LightItalic.ttf") format("ttf"), url("/fonts/RobotoMono-Medium.ttf") format("ttf"), url("/fonts/RobotoMono-MediumItalic.ttf") format("ttf"), url("/fonts/RobotoMono-Regular.ttf") format("ttf"), url("/fonts/RobotoMono-Thin.ttf") format("ttf"), url("/fonts/RobotoMono-ThinItalic.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -58,7 +49,6 @@ p {
   z-index: 2;
   line-height: 1.1;
   text-align: center;
-
   &--long {
     font-size: 30px;
   }
@@ -89,5 +79,9 @@ p {
   max-width: 600px;
   margin-top: -9rem;
   font-size: 10rem;
+  text-align: center;
+}
+
+.center {
   text-align: center;
 }
