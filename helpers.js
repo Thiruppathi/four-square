@@ -27,7 +27,7 @@ exports.categoryIcon = venue => {
       venue.categories[0].icon.suffix
     }`;
   } else {
-    return "/images/icons/map.svg";
+    return "/images/icons/placeholder.png";
   }
 };
 
