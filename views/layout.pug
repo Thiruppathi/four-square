@@ -5,6 +5,13 @@ html(lang='en')
     link(rel='stylesheet', href='/dist/style.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/foursquare.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png")
+    link(rel="manifest" href="/dist/manifest.json")
+    link(rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#313757")
+    meta(name="theme-color" content="#313757")
   body
     block header
       header.top
@@ -22,7 +29,7 @@ html(lang='en')
             ul
               each item in h.menu
                 li.nav__item
-                  a.nav__link(href=item.slug, id=item.id, target=item.target class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
+                  a.nav__link(href=item.slug, id=item.id, target=item.target rel=item.rel class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
                     != h.icon(item.icon)
                     span #{item.title}
 

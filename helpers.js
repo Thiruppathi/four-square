@@ -88,6 +88,7 @@ exports.menu = [
     title: "Code",
     icon: "near-me",
     id: "explore",
-    target: "_blank"
+    target: "_blank",
+    rel: "noopener"
   }
 ];
