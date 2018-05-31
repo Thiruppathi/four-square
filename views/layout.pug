@@ -40,21 +40,18 @@ html(lang='en')
             - const categories = Object.keys(locals.flashes)
             each category in categories
               each message in flashes[category]
-                .flash(class=`flash--${category}`)
+                .flash(class=`flash--${category}`).animated.zoomIn
                   p.flash__text!= message
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     .content
       block content
       .inner
           .flash-messages.hidden(id='nudge')
-              Err.flash.flash--info.animated.bounceInUp
+              Err.flash.flash--info.animated.zoomIn
                   p.flash__text(id='nudgeInfo') Loading...
           .flash-messages.hidden(id='nudgeSuccess')
-              Err.flash.flash--success.animated.bounceInUp
+              Err.flash.flash--success.animated.zoomIn
                   p.flash__text(id='nudgeSuccessInfo') Successfully located you!!
-    footer(id="footer" role="contentinfo")
-      span Made with ❤️ by 
-        a(href="https://thiru.xyz") Thiru 
 
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)

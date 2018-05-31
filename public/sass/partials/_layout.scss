@@ -13,10 +13,6 @@ body {
   }
 }
 
-.content {
-  min-height: 83vh;
-}
-
 .inner {
   max-width: 90%;
   margin: 0 auto;
@@ -35,7 +31,7 @@ img.error {
 }
 
 footer {
-  padding-top: 100px 0;
+  padding: 100px 0;
   height: 80px;
   color: $blue;
   text-align: center;

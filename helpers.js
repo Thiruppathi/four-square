@@ -86,7 +86,7 @@ exports.menu = [
   {
     slug: "https://github.com/thiruppathi/four-square",
     title: "Code",
-    icon: "near-me",
+    icon: "github",
     id: "explore",
     target: "_blank",
     rel: "noopener"
