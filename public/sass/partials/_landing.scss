@@ -72,5 +72,10 @@
         h5 svg {
             width: 30px;
         }
+        &:hover {
+            svg {
+                transform: scale(1.2)
+            }
+        }
     }
 }

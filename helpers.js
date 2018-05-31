@@ -84,11 +84,22 @@ exports.siteName = `Foure Square`;
 exports.menu = [
   { slug: "/search-venues", title: "App Demo", icon: "search" },
   {
-    slug: "https://github.com/thiruppathi/four-square",
+    slug: "http://bit.ly/fs-github",
     title: "Code",
     icon: "github",
-    id: "explore",
     target: "_blank",
     rel: "noopener"
+  },
+  {
+    slug: "https://bit.ly/fs-doc",
+    title: "Documentation",
+    icon: "instruction",
+    target: "_blank",
+    rel: "noopener"
+  },
+  {
+    slug: "/lighthouse",
+    title: "Audit Report",
+    icon: "lighthouse"
   }
 ];
