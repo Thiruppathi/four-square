@@ -1,1 +1,5 @@
-theme: jekyll-theme-cayman
+title: Four Square
+logo: /public/images/icons/foursquare.png
+description: Web app using FourSquare API
+show_downloads: true
+theme: jekyll-theme-minimal
