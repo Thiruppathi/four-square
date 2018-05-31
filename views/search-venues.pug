@@ -3,6 +3,7 @@ include mixins/_searchVenueForm
 include mixins/_venueCard
 
 block content
+    h2.title.title--landing Four Square
     .inner.searchContainer
         +searchVenueForm(near, category, lat, lng, radius)
     if venues

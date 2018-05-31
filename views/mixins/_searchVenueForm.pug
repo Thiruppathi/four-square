@@ -5,16 +5,16 @@ mixin searchVenueForm(near="", category="", lat ="", lng="",radius="1000")
                     label(for='category') I'm Looking For
                     input(type="text" id="category" name="category" class="category" placeholder="Coffee / Pizza" value=`${category}`)
                 .selectWrapper
-                    label(for='address') In the Location
+                    label(for='near') In the Location
                     input(type="text" id="near" name="near" class="near" placeholder="City / Country / ZipCode" value=`${near}`)
                     input(type="hidden" id="lng" name="lng" value=`${lng}` )
                     input(type="hidden" id="lat" name="lat" value=`${lat}` )
                 .selectWrapper
-                    label(for='slider') Within 
+                    label(for='radius') Within 
                         span(id="radiusLabel") `${radius}` 
                         |   meter Radius
                     .slidecontainer
-                        input(type="range" min="10" max="1000" value=`${radius}`  class="slider" name="radius" id="radius")
+                        input(type="range" min="10" max="1000" value=`${radius}` class="slider" name="radius" id="radius"  aria-valuemin="10"  aria-valuemax="100"  aria-valuenow=`${radius}`)
                 .selectWrapper
                     input(type="submit", value="Search Venues" class="submitButton" id="searchVenues")
                 //- .selectWrapper
