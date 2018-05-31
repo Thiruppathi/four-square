@@ -5,7 +5,6 @@ node_modules/
 haters/
 variables.env
 variables.env.now
-public/dist/*
 build/contracts
 build/*
 package-lock.json
