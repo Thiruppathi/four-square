@@ -1,5 +1,5 @@
 title: Four Square
-logo: /public/images/icons/foursquare.png
+logo: /public/images/icons/logo.svg
 description: Web app using FourSquare API
 show_downloads: true
 theme: jekyll-theme-minimal
