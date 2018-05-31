@@ -54,4 +54,9 @@
             margin-right: 0;
         }
     }
+    &__description {
+        &--topSpace {
+            padding-top: 4em;
+        }
+    }
 }
