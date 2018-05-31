@@ -5,6 +5,13 @@
     padding: 0;
     justify-content: space-between;
     background: $blue;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+    }
     &__section {
         display: flex;
         &--search {
@@ -39,7 +46,6 @@
                 transform: scale(1.2)
             }
             background: $grey;
-            
         }
         &--logo {
             &:hover {

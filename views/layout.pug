@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang='en')
   head
     title= `${h.siteName} | ${title}`
     link(rel='stylesheet', href='/dist/style.css')
@@ -10,19 +10,21 @@ html
       header.top
         nav.nav
           .nav__section.nav__section--pages
-            li.nav__item
-              a.nav__link.nav__link--logo(href="/")
-                != h.icon('logo')
+            ul
+              li.nav__item
+                a.nav__link.nav__link--logo(href="/" aria-label="Home Page")
+                  != h.icon('logo')
           .nav__section.nav__section--search
             .search
               //- input.search__input(type="text" placeholder="I'm looking for" name="search" id="headerSearch")
               .search__results
           .nav__section.nav__section--user
-            each item in h.menu
-              li.nav__item
-                a.nav__link(href=item.slug, id=item.id, target=item.target class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
-                  != h.icon(item.icon)
-                  span #{item.title}
+            ul
+              each item in h.menu
+                li.nav__item
+                  a.nav__link(href=item.slug, id=item.id, target=item.target class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
+                    != h.icon(item.icon)
+                    span #{item.title}
 
     block messages
       if locals.flashes
@@ -42,7 +44,7 @@ html
                   p.flash__text(id='nudgeInfo') Loading...
           .flash-messages.hidden(id='nudgeSuccess')
               Err.flash.flash--success.animated.bounceInUp
-                  p.flash__text(id='nudgeSuccess') Successfully located you!!
+                  p.flash__text(id='nudgeSuccessInfo') Successfully located you!!
     footer(id="footer" role="contentinfo")
       span Made with ❤️ by 
         a(href="https://thiru.xyz") Thiru 
