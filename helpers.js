@@ -91,15 +91,15 @@ exports.menu = [
     rel: "noopener"
   },
   {
+    slug: "/lighthouse",
+    title: "Audit Report",
+    icon: "lighthouse"
+  },
+  {
     slug: "https://bit.ly/fs-doc",
     title: "Documentation",
     icon: "instruction",
     target: "_blank",
     rel: "noopener"
-  },
-  {
-    slug: "/lighthouse",
-    title: "Audit Report",
-    icon: "lighthouse"
   }
 ];
