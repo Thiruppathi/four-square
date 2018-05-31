@@ -82,6 +82,12 @@ exports.siteName = `Foure Square`;
 
 // This is how the nav menu is built.
 exports.menu = [
-  { slug: "/search-venues", title: "Search", icon: "search" }
-  // { slug: "/explore", title: "Explore", icon: "near-me", id: "explore" }
+  { slug: "/search-venues", title: "App Demo", icon: "search" },
+  {
+    slug: "https://github.com/thiruppathi/four-square",
+    title: "Code",
+    icon: "near-me",
+    id: "explore",
+    target: "_blank"
+  }
 ];

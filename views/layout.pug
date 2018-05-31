@@ -15,12 +15,12 @@ html
                 != h.icon('logo')
           .nav__section.nav__section--search
             .search
-              input.search__input(type="text" placeholder="" name="search" id="headerSearch")
+              //- input.search__input(type="text" placeholder="I'm looking for" name="search" id="headerSearch")
               .search__results
           .nav__section.nav__section--user
             each item in h.menu
               li.nav__item
-                a.nav__link(href=item.slug, id=item.id, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
+                a.nav__link(href=item.slug, id=item.id, target=item.target class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
                   != h.icon(item.icon)
                   span #{item.title}
 

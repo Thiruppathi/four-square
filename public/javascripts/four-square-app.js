@@ -6,7 +6,7 @@ import autocomplete from "./modules/autocomplete";
 import { getLngLat, getAddressFromLatLng } from "./modules/reverseGeoCode";
 
 autocomplete($("#near"), $("#lat"), $("#lng"));
-autocomplete($("#headerSearch"), $("#lat"), $("#lng"));
+// autocomplete($("#headerSearch"), $("#lat"), $("#lng"));
 
 function getMyCurrentLocation() {
   var startPos;
