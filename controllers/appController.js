@@ -8,13 +8,16 @@ exports.landing = (req, res) => {
   res.render("landing", { title: "Find places nearby" });
 };
 
+exports.lighthouse = (req, res) => {
+  res.render("lighthouse");
+};
+
 exports.renderSearchVenues = (req, res) => {
   res.render("search-venues", { title: "Search Venues" });
 };
 
 exports.getVenues = async (req, res) => {
   let { near = "", category, lat, lng, radius } = req.query;
-  console.log(req.query);
   let ll = lat && lng ? `${lat},${lng}` : "";
   let url = getUrl(ll, category, near);
   let result = await axios(url);
@@ -37,7 +40,6 @@ exports.getVenueById = async (req, res, next) => {
   const result = await axios(getVenueByIdUrl(venueId));
   let venue = result.data.response.venue;
   let similarVenues = await this.getSimilarVenuesList(venue.id);
-  console.log("----- ", similarVenues, similarVenues.length);
   res.render("venue", {
     venue,
     title: venue.name,
@@ -50,14 +52,12 @@ exports.getSimilarVenues = async (req, res) => {
   let venueId = req.params.venueId;
   const result = await axios(getSimilarVenueUrl(venueId));
   let venues = result.data.response.similarVenues.items;
-  console.log("similar length: ", venues.length);
   res.json({ venues });
 };
 
 exports.getSimilarVenuesList = async venueId => {
   const result = await axios(getSimilarVenueUrl(venueId));
   let venues = result.data.response.similarVenues.items;
-  console.log("similar length: ", venues.length);
   return venues;
 };
 

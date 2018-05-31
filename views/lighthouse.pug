@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h2.landing.landing__title Audit reports from Lighthouse
+    .landing__hero
+        .container
+            a.container.container__item.animated.zoomIn(href="https://bit.ly/fs-landing-report" rel="noopener" target="_blank" aria-label="Landing Page Report")
+                != h.icon('home')
+                h5 Landing Page
+            a.container.container__item.animated.zoomIn(href="https://bit.ly/fs-search-report" rel="noopener" target="_blank" aria-label="Search Venue Report" )
+                != h.icon('search-engine')
+                h5 Search Form 
+            a.container.container__item.animated.zoomIn(href="https://bit.ly/fs-search-results-report" rel="noopener" target="_blank" aria-label="Search Result Report")
+                != h.icon('search-results')
+                h5.newTab Search Results
+            a.container.container__item.animated.zoomIn(href="https://bit.ly/fs-venue-report" rel="noopener" target="_blank" aria-label="Venue Detail Report")
+                != h.icon('venue-detail')
+                h5 Venue Detail
+
+    footer.animated.zoomIn(id="footer" role="contentinfo")
+        span Made with ❤️ by 
+        a(href="https://thiru.xyz") Thiru 
