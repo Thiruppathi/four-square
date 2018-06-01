@@ -37,10 +37,37 @@ Here are the features I initially intended to do, but didn't do due to time cons
 To check the quality, performance, a11y, best practices of the application, I've used Light House.
 My Target was 80+ score in each area; I've achieved 90+ in all areas except PWA.
 
-* [Landing Page Report](https://bit.ly/fs-landing-report)
-* [Search-Venues Report](https://bit.ly/fs-search-report)
-* [Search Results Reprot](https://bit.ly/fs-search-results-report)
-* [Venue Details Report](https://bit.ly/fs-venue-report)
+[Landing Page Report](https://bit.ly/fs-landing-report)
+
+[![Lighthouse score: 93/100](https://lighthouse-badge.appspot.com/?score=93&compact&category=Performance)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&compact&category=A11y)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 94/100](https://lighthouse-badge.appspot.com/?score=94&compact&category=BestPractices)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 89/100](https://lighthouse-badge.appspot.com/?score=89&compact&category=SEO)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 73/100](https://lighthouse-badge.appspot.com/?score=73&compact&category=PWA)](https://github.com/ebidel/lighthouse-badge)
+
+[Search-Venues Report](https://bit.ly/fs-search-report)
+
+[![Lighthouse score: 96/100](https://lighthouse-badge.appspot.com/?score=96&compact&category=Performance)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&compact&category=A11y)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 94/100](https://lighthouse-badge.appspot.com/?score=94&compact&category=BestPractices)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 89/100](https://lighthouse-badge.appspot.com/?score=89&compact&category=SEO)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 73/100](https://lighthouse-badge.appspot.com/?score=73&compact&category=PWA)](https://github.com/ebidel/lighthouse-badge)
+
+[Search Results Reprot](https://bit.ly/fs-search-results-report)
+
+[![Lighthouse score: 98/100](https://lighthouse-badge.appspot.com/?score=98&compact&category=Performance)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&compact&category=A11y)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 94/100](https://lighthouse-badge.appspot.com/?score=94&compact&category=BestPractices)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 89/100](https://lighthouse-badge.appspot.com/?score=89&compact&category=SEO)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 73/100](https://lighthouse-badge.appspot.com/?score=73&compact&category=PWA)](https://github.com/ebidel/lighthouse-badge)
+
+[Venue Details Report](https://bit.ly/fs-venue-report)
+
+[![Lighthouse score: 99/100](https://lighthouse-badge.appspot.com/?score=99&compact&category=Performance)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&compact&category=A11y)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 94/100](https://lighthouse-badge.appspot.com/?score=94&compact&category=BestPractices)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 89/100](https://lighthouse-badge.appspot.com/?score=89&compact&category=SEO)](https://github.com/ebidel/lighthouse-badge)
+[![Lighthouse score: 73/100](https://lighthouse-badge.appspot.com/?score=73&compact&category=PWA)](https://github.com/ebidel/lighthouse-badge)
 
 Overall for the time spent, I think I've produced a decent MVP to start with. 🙂
 
