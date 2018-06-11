@@ -144,4 +144,4 @@ If you encounter this error, Create a new set of CLIENT_ID & CLIENT_SECRET keys 
 
 ### Why not a fancy framework (React/Vue/Angular)?
 
-Introducing React, Redux, ReduxThunk, MiddleWare would be a overkill. So Proceed with simple ES6 using pug templates.
+Introducing React, Redux, ReduxThunk, MiddleWare would be a overkill. So Proceeded with simple ES6 using pug templates.
