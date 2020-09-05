@@ -7,4 +7,3 @@ variables.env
 variables.env.now
 build/contracts
 build/*
-package-lock.json
